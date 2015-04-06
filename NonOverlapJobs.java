@@ -4,20 +4,13 @@ Output: a subset so that no 2 jobs overlap and the cost is maximum
 */
 
 public class Solution {
-	
-	public static final void main(String[] args) {
-		List<Job> jobs = Arrays.asList(new Job(1, 3, 5), new Job(2, 4, 1),
-				new Job(4, 7, 3));
-		System.out.println(findNonOverlapJobs(jobs));
-	}
-
-public class Solution {
 
   public static final void main(String[] args) {
     List<Job> jobs = Arrays.asList(new Job(1, 3, 5), new Job(2, 4, 1), new Job(
         4, 7, 3));
     System.out.println(findNonOverlapJobs(jobs));
   }
+
   public class Job {
     int start;
     int end;
