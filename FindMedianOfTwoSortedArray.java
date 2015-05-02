@@ -29,8 +29,8 @@ public class FindMedianOfTwoSortedArray {
 						55, 62 }, new int[] { 2, 4, 5, 7, 33, 56, 77, 88 }),
 				0.000001);
 		Random seedR = new Random();
-		// long seed = seedR.nextLong();
-		long seed = 2184050073844249789l;
+		 long seed = seedR.nextLong();
+//		long seed = 2184050073844249789l;
 		System.out.println("seed=" + seed);
 		Random r = new Random(seed);
 		for (int i = 0; i < 50000; i++) {
@@ -49,8 +49,8 @@ public class FindMedianOfTwoSortedArray {
 			}
 			Arrays.sort(A);
 			Arrays.sort(B);
-			print(A);
-			print(B);
+//			print(A);
+//			print(B);
 			Assert.assertEquals(findMedianOfTwoSortedArrayBase(A, B),
 					findMedianOfTwoSortedArray(A, B), 0.00001);
 			Assert.assertEquals(findMedianOfTwoSortedArrayBase(A, B),
@@ -64,16 +64,16 @@ public class FindMedianOfTwoSortedArray {
 		System.arraycopy(A, 0, C, 0, A.length);
 		System.arraycopy(B, 0, C, A.length, B.length);
 		Arrays.sort(C);
-		print(A);
-		print(B);
+//		print(A);
+//		print(B);
 		// print(C);
 		if (C.length % 2 == 0) {
-			System.out.println("even");
+//			System.out.println("even");
 			int mid = (A.length + B.length) / 2 - 1;
 			return (C[mid] + C[mid + 1]) * 0.5;
 		} else {
 			int mid = (A.length + B.length) / 2;
-			System.out.println("odd - mid: " + mid);
+//			System.out.println("odd - mid: " + mid);
 			return C[mid];
 		}
 	}
